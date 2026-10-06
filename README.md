@@ -4,9 +4,7 @@ A professional personal website built with plain **HTML, CSS, and JavaScript** (
 
 ## Live Site
 
-> After publishing, your site will be available at:
-> `https://galactus06.github.io/<repository-name>/`
-> (replace `<repository-name>` with your repo name, e.g. `personal-website`)
+> **https://galactus06.github.io/personal-website/**
 
 ## Project Structure
 
