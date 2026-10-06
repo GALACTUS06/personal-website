@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zicheng Liu — researcher, gamer, and builder working across computer vision, agentic AI systems, and data-driven visualization. Explore my research, projects, and experience." />
+  <meta name="author" content="Zicheng Liu" />
+  <meta name="keywords" content="Zicheng Liu, AI, computer vision, agentic AI, data visualization, Stony Brook University, research" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zicheng Liu | Personal Website" />
+  <meta property="og:description" content="Researcher, gamer, and builder working across computer vision, agentic AI systems, and data-driven visualization." />
+  <meta property="og:image" content="assets/avatar.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Zicheng Liu | Personal Website" />
+  <meta name="twitter:description" content="Researcher, gamer, and builder working across computer vision, agentic AI systems, and data-driven visualization." />
+  <title>Zicheng Liu | Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+  <!-- Full-page interactive particle background -->
+  <canvas class="page-particles" id="page-particles" aria-hidden="true"></canvas>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#top" class="nav__logo" aria-label="Back to top">
+        <span class="nav__logo-mark">ZL</span>
+        <span class="nav__logo-text">Zicheng Liu</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__menu">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#research" class="nav__link">Research</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__grid"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Hello, my name is</p>
+          <h1 class="hero__title">Zicheng Liu</h1>
+          <p class="hero__typewriter" aria-label="Roles: Gamer, Player, Researcher, Project Manager, AI User, Builder, Hardware Nerd, Dual-Degree Student, Lifelong Learner, Community Builder">
+            <span class="hero__typewriter-prefix">I am a&nbsp;</span>
+            <span class="hero__typewriter-text" id="typewriter-text">Gamer</span>
+            <span class="hero__typewriter-cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero__subtitle">
+            I build AI agents, interactive tools, and the occasional gaming rig —
+            <em>grounded in research, driven by curiosity</em>.
+          </p>
+          <p class="hero__desc">
+            A researcher, builder, and gamer who works across computer vision
+            datasets, agentic AI systems, and data-driven visualization — turning
+            curious ideas into reproducible, human-friendly technology.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+          </div>
+          <ul class="hero__stats" aria-label="Quick facts">
+            <li><strong>3.88</strong><span>GPA at SBU</span></li>
+            <li><strong>1</strong><span>arXiv Publication</span></li>
+            <li><strong>2</strong><span>Research Projects</span></li>
+            <li><strong>20+</strong><span>Tech Tutorials Co-created</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <div class="hero__portrait-wrap">
+            <img src="assets/avatar.png" alt="Portrait of Zicheng Liu" class="hero__portrait" />
+            <div class="hero__portrait-ring" aria-hidden="true"></div>
+          </div>
+          <div class="hero__badge" aria-hidden="true">
+            <span class="hero__badge-icon">🎮</span>
+            <span>Gamer</span>
+          </div>
+          <div class="hero__badge" aria-hidden="true">
+            <span class="hero__badge-icon">🤖</span>
+            <span>AI Explorer</span>
+          </div>
+          <div class="hero__badge" aria-hidden="true">
+            <span class="hero__badge-icon">🔧</span>
+            <span>Hardware Nerd</span>
+          </div>
+          <div class="hero__badge" aria-hidden="true">
+            <span class="hero__badge-icon">🤝</span>
+            <span>Community Builder</span>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span class="hero__scroll-mouse" aria-hidden="true"></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Get to know me</p>
+          <h2 class="section__title">About Me</h2>
+          <div class="section__line" aria-hidden="true"></div>
+        </header>
+        <div class="about__grid">
+          <div class="about__media">
+            <img src="assets/about-photo.jpg" alt="Zicheng Liu presenting his research at a symposium" class="about__image" />
+            <div class="about__funfact">
+              <h3>When I'm not coding…</h3>
+              <p>
+                You can find me at Lenovo innovation forums, testing the latest
+                hardware, or co-designing interactive demo stations in flagship
+                stores. I love translating real user pain points into better
+                technology.
+              </p>
+            </div>
+          </div>
+          <div class="about__text">
+            <h3 class="about__heading">
+              A curious builder who connects technology, research, and people.
+            </h3>
+            <p>
+              My journey started with a simple habit: taking things apart to see
+              how they work. That curiosity grew from PC hardware diagnostics into
+              programming, and eventually into research on how machines understand
+              people — from detecting social groups in egocentric video to
+              generating lifelike crowd animations in virtual cities.
+            </p>
+            <p>
+              Today, I work in Stony Brook's Synthetic Perception and Learning Lab,
+              where I contribute to <strong>EgoGroups</strong>, a large-scale
+              benchmark for detecting social groups in the wild, and I lead an
+              independent subproject that brings event-driven storytelling to
+              CARLA/OpenMap city environments. Along the way, I have built agentic
+              financial-analysis pipelines on AWS Bedrock and data-driven web
+              applications deployed with GitHub Actions.
+            </p>
+            <p>
+              What drives me is the space where rigorous systems meet human
+              experience. Whether I am annotating video frames, scripting walking-tour
+              renders, or designing a web interface, I care about work that is
+              reproducible, accessible, and genuinely useful to the people who
+              interact with it. I am currently open to research collaborations,
+              internships, and team projects in AI, computer vision, and interactive
+              media.
+            </p>
+            <ul class="about__highlights">
+              <li>
+                <span class="about__highlight-icon" aria-hidden="true">🌏</span>
+                <div>
+                  <strong>Dual-degree, dual-culture perspective</strong>
+                  <p>Studying in both the U.S. and China, fluent in English and Chinese.</p>
+                </div>
+              </li>
+              <li>
+                <span class="about__highlight-icon" aria-hidden="true">🤝</span>
+                <div>
+                  <strong>Community-minded</strong>
+                  <p>Active Lenovo "Hardcore Fan" contributor shaping real products since 2023.</p>
+                </div>
+              </li>
+              <li>
+                <span class="about__highlight-icon" aria-hidden="true">⚙️</span>
+                <div>
+                  <strong>Hands-on engineer</strong>
+                  <p>From GPU thermal interfaces to annotation tools — I build what I need.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Academic background</p>
+          <h2 class="section__title">Education</h2>
+          <div class="section__line" aria-hidden="true"></div>
+        </header>
+        <div class="edu__grid">
+          <article class="edu-card reveal">
+            <div class="edu-card__icon" aria-hidden="true">🏛️</div>
+            <h3 class="edu-card__school">Stony Brook University</h3>
+            <p class="edu-card__degree">B.S. in Information Systems <span>(Dual-Degree Program)</span></p>
+            <p class="edu-card__meta">New York, USA &nbsp;·&nbsp; Aug. 2025 – May 2027</p>
+            <p class="edu-card__gpa"><strong>GPA: 3.88 / 4.0</strong></p>
+            <ul class="edu-card__list">
+              <li>Focus: information systems, AI applications, and data-driven software</li>
+              <li>Undergraduate researcher in the Synthetic Perception and Learning Lab</li>
+            </ul>
+          </article>
+          <article class="edu-card reveal">
+            <div class="edu-card__icon" aria-hidden="true">📚</div>
+            <h3 class="edu-card__school">Anhui University, SBU Institute</h3>
+            <p class="edu-card__degree">B.S. in Digital Media Technology</p>
+            <p class="edu-card__meta">Hefei, China &nbsp;·&nbsp; Sep. 2023 – Jun. 2027</p>
+            <p class="edu-card__gpa"><strong>GPA: 4.00 / 5.0</strong></p>
+            <ul class="edu-card__list">
+              <li>Focus: digital media, visualization, and interactive content design</li>
+              <li>Coursework spanning graphics, web technologies, and media production</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section class="section" id="research">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">What I'm working on</p>
+          <h2 class="section__title">Research Experience</h2>
+          <div class="section__line" aria-hidden="true"></div>
+        </header>
+
+        <article class="research-card reveal">
+          <div class="research-card__timeline">
+            <span class="research-card__date">Summer 2026</span>
+          </div>
+          <div class="research-card__body">
+            <h3>Outdoor Event-Driven Storytelling on CARLA / OpenMap City Stages</h3>
+            <p class="research-card__role">
+              Independent Summer Research Subproject &nbsp;·&nbsp;
+              Advised by Prof. Paola Cascante-Bonilla
+            </p>
+            <ul class="research-card__points">
+              <li>Constructed outdoor city stages from CARLA/OpenMap assets exported as USD tiles, and adapted walkable maps to keep agents safely on sidewalks.</li>
+              <li>Extended Event-Driven Storytelling (EDS) to CARLA-derived environments by mapping prompts to structured social events and generating sidewalk-constrained trajectories through motion matching.</li>
+              <li>Developed a fully scripted demonstration pipeline in which coding agents authored, debugged, and retargeted crowd layouts — baking walk, chat, hug, and wave segments into reproducible Python walking-tour renders.</li>
+              <li>Demonstrated multi-agent films across diverse city tiles under tour, commute, and gathering layouts, improving motion diversity and realism while reducing collisions and clipping artifacts.</li>
+            </ul>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li class="tag">CARLA</li>
+              <li class="tag">Blender</li>
+              <li class="tag">SMPL-X</li>
+              <li class="tag">Python</li>
+              <li class="tag">Motion Matching</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="research-card reveal">
+          <div class="research-card__timeline">
+            <span class="research-card__date">Sep. 2025 – Present</span>
+          </div>
+          <div class="research-card__body">
+            <h3>EgoGroups — A Large-Scale Dataset for Detecting Groups of People in the Wild</h3>
+            <p class="research-card__role">
+              Synthetic Perception and Learning Lab &nbsp;·&nbsp;
+              Advised by Prof. Paola Cascante-Bonilla
+            </p>
+            <ul class="research-card__points">
+              <li>Contributed to EgoGroups, a large-scale dataset capturing social group behavior from walking-tour videos recorded in cities worldwide.</li>
+              <li>Performed video- and frame-level annotation of group membership and social interactions according to standardized labeling guidelines.</li>
+              <li>Modified annotation and preprocessing scripts and added lightweight tooling to streamline data handling, quality control, and annotation workflows.</li>
+              <li>Expanded the annotation tool with a fine-grained behavioral module and produced an onboarding tutorial to help new annotators maintain consistent labeling standards.</li>
+            </ul>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li class="tag">Python</li>
+              <li class="tag">Computer Vision</li>
+              <li class="tag">Data Annotation</li>
+              <li class="tag">Tooling</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside class="publication reveal" aria-label="Publication">
+          <div class="publication__icon" aria-hidden="true">📄</div>
+          <div class="publication__body">
+            <h3>Publication</h3>
+            <p>
+              Jeffri Murrugarra-Llerena, Pranav Chitale, <strong>Zicheng Liu</strong>,
+              Kai Ao, Yujin Ham, Guha Balakrishnan, and Paola Cascante-Bonilla (2026).
+              <em>EgoGroups: A Benchmark for Detecting Social Groups of People in the Wild.</em>
+              arXiv preprint arXiv:2603.22249.
+            </p>
+            <a class="publication__link" href="https://arxiv.org/abs/2603.22249" target="_blank" rel="noopener noreferrer">
+              Read on arXiv →
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Selected work</p>
+          <h2 class="section__title">Projects</h2>
+          <div class="section__line" aria-hidden="true"></div>
+        </header>
+
+        <div class="projects__grid">
+          <article class="project-card reveal">
+            <div class="project-card__banner project-card__banner--finance" aria-hidden="true">
+              <img src="assets/project-agentic.png" alt="" />
+            </div>
+            <div class="project-card__body">
+              <h3>Agentic Financial Insights Workflow</h3>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Python</li>
+                <li class="tag">AWS Bedrock</li>
+                <li class="tag">Pandas</li>
+              </ul>
+              <p>
+                A CLI-orchestrated financial analysis workflow that uses AWS Bedrock
+                for plan generation and transaction categorization, paired with
+                deterministic Python modules for KPI computation and monthly
+                summaries.
+              </p>
+              <ul class="project-card__points">
+                <li>Processed four months of synthetic transaction data into reproducible categorized records</li>
+                <li>Generated KPI reports and summary artifacts with externalized model, region, and credential configuration</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/GALACTUS06/agentic-financial-insights-workflow" target="_blank" rel="noopener noreferrer">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__banner project-card__banner--agents" aria-hidden="true">
+              <img src="assets/project-rule72.png" alt="" />
+            </div>
+            <div class="project-card__body">
+              <h3>Rule of 72 Multi-Agent Demo</h3>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Python</li>
+                <li class="tag">AWS Bedrock</li>
+                <li class="tag">Meta Llama 3</li>
+              </ul>
+              <p>
+                A multi-agent financial education system where a TeacherAgent and
+                a CalculatorAgent cooperate through AWS Bedrock: one explains
+                concepts in natural language, the other does the math and plots
+                growth charts.
+              </p>
+              <ul class="project-card__points">
+                <li>Supports questions like "At 8%", "compare 6%, 8%, 10%", and "plot Growth 6000 at 8%"</li>
+                <li>Modular agent/tool architecture with secure credential handling and a validation path without AWS</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/GALACTUS06/rule-of-72-multi-agent-demo" target="_blank" rel="noopener noreferrer">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__banner project-card__banner--atlas" aria-hidden="true">
+              <img src="assets/project-atlas.png" alt="" />
+            </div>
+            <div class="project-card__body">
+              <h3>Player Value Atlas — D3 Visualization</h3>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">JavaScript / D3.js</li>
+                <li class="tag">Python</li>
+                <li class="tag">HTML/CSS</li>
+              </ul>
+              <p>
+                An interactive D3.js visualization exploring soccer player
+                performance and market value across a reproducible fused dataset
+                of 59,137 player-season records from Europe's top five leagues.
+              </p>
+              <ul class="project-card__points">
+                <li>Scatterplots, histograms, and category counts with jitter for mixed axes and rich tooltips</li>
+                <li>Python data-fusion pipeline with automated quality reports and a 21-attribute verified dataset</li>
+              </ul>
+              <a class="project-card__link" href="https://github.com/GALACTUS06/football-player-value-lab" target="_blank" rel="noopener noreferrer">
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Beyond the classroom</p>
+          <h2 class="section__title">Extracurricular Experience</h2>
+          <div class="section__line" aria-hidden="true"></div>
+        </header>
+
+        <article class="exp-card reveal">
+          <div class="exp-card__header">
+            <div>
+              <h3>Lenovo Consumer — Hardcore Fan Member</h3>
+              <p class="exp-card__meta">Aug. 2023 – Present</p>
+            </div>
+            <div class="exp-card__logo" aria-hidden="true">💻</div>
+          </div>
+          <ul class="exp-card__points">
+            <li>Participated in 10+ innovation forums with Lenovo's marketing and engineering teams, analyzing user behavior data to co-develop 20+ tech tutorials that boosted social media engagement.</li>
+            <li>Provided UX feedback that directly shaped 3 iterations of the DuoSun (DSA) app, particularly in streamlining its thermal monitoring interface for gamers.</li>
+            <li>Attended flagship launches (Legion 2024, Yoga Book 9i), gaining rare access to engineers' thermal management solutions and advocating successfully for dual-screen demo stations in 5 flagship stores.</li>
+            <li>Co-designed "Flip-and-Test" interactive stations that increased customer dwell time by 25% and led 2 post-launch roundtables, translating user pain points into actionable recommendations.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">My toolkit</p>
+          <h2 class="section__title">Technical Skills</h2>
+          <div class="section__line" aria-hidden="true"></div>
+        </header>
+
+        <div class="skills__grid">
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title"><span aria-hidden="true">🧠</span> Programming</h3>
+            <ul class="skill-group__list">
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title"><span aria-hidden="true">🛠️</span> Tools &amp; Platforms</h3>
+            <ul class="skill-group__list">
+              <li>AWS Bedrock</li>
+              <li>CARLA</li>
+              <li>Blender</li>
+              <li>SMPL-X</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title"><span aria-hidden="true">📊</span> Web &amp; Data</h3>
+            <ul class="skill-group__list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>D3.js</li>
+              <li>Pandas</li>
+              <li>JSON</li>
+              <li>Matplotlib</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title"><span aria-hidden="true">🔧</span> Systems &amp; Hardware</h3>
+            <ul class="skill-group__list">
+              <li>PC diagnostics &amp; component replacement</li>
+              <li>Windows / Linux installation</li>
+              <li>Performance maintenance</li>
+              <li>Data recovery</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title"><span aria-hidden="true">🌐</span> Languages</h3>
+            <ul class="skill-group__list">
+              <li>Mandarin Chinese — Native</li>
+              <li>English — Fluent</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Let's connect</p>
+          <h2 class="section__title">Get In Touch</h2>
+          <div class="section__line" aria-hidden="true"></div>
+        </header>
+        <p class="contact__intro">
+          I'm currently open to research collaborations, internships, and
+          project teams in AI, computer vision, and interactive media. Whether
+          you have a question, an idea, or just want to say hi, my inbox is
+          always open — I'd love to hear from you!
+        </p>
+        <div class="contact__grid">
+          <a class="contact-card" href="mailto:zicheng.liu@stonybrook.edu">
+            <span class="contact-card__icon" aria-hidden="true">📧</span>
+            <span class="contact-card__label">Email</span>
+            <span class="contact-card__value">zicheng.liu@stonybrook.edu</span>
+          </a>
+          <a class="contact-card" href="https://github.com/GALACTUS06" target="_blank" rel="noopener noreferrer">
+            <img class="contact-card__icon contact-card__icon--img" src="assets/github.svg" alt="GitHub logo" />
+            <span class="contact-card__label">GitHub</span>
+            <span class="contact-card__value">github.com/GALACTUS06</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Zicheng Liu. Designed &amp; built with HTML, CSS, and JavaScript.</p>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
