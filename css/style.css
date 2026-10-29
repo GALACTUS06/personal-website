@@ -682,8 +682,32 @@ ul { list-style: none; }
 /* ============ PROJECTS ============ */
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.9rem;
+}
+
+/* The most important project gets a full-width, horizontal featured card */
+.project-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+}
+.project-card--featured .project-card__banner {
+  height: 100%;
+  min-height: 330px;
+}
+.project-card--featured .project-card__body {
+  padding: 2.35rem 2.6rem;
+}
+.project-card--featured .project-card__body h3 {
+  font-size: 1.65rem;
+}
+@media (max-width: 860px) {
+  .project-card--featured { grid-template-columns: 1fr; }
+  .project-card--featured .project-card__banner {
+    height: 230px;
+    min-height: 0;
+  }
 }
 
 .project-card {
@@ -702,8 +726,24 @@ ul { list-style: none; }
 }
 
 .project-card__banner {
+  position: relative;
   height: 190px;
   overflow: hidden;
+}
+.project-card__flag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-md);
+  z-index: 1;
 }
 .project-card__banner img {
   width: 100%;
@@ -760,6 +800,19 @@ ul { list-style: none; }
   font-weight: 600;
   font-size: 0.93rem;
 }
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+  margin-top: auto;
+}
+.project-card__links .project-card__link { margin-top: 0; }
+
+.project-card__link--ghost {
+  color: var(--color-ink-soft);
+}
+.project-card__link--ghost:hover { color: var(--color-accent); }
 
 /* ============ EXPERIENCE ============ */
 .exp-card {

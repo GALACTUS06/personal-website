@@ -20,6 +20,7 @@ Personal Website/
 │   ├── about-photo.jpg     # About-section photo
 │   ├── project-agentic.png # Project banner: agentic financial workflow
 │   ├── project-rule72.png  # Project banner: multi-agent demo
+│   ├── project-icarus.png  # Project banner: Icarus canvas game
 │   ├── project-atlas.png   # Project banner: D3 player value dashboard
 │   ├── github.svg          # GitHub logo (contact section)
 │   └── favicon.svg         # Browser tab icon
