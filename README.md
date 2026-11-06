@@ -40,7 +40,7 @@ Personal Website/
    ```bash
    git init
    git add .
-   git commit -m "Personal website for CSE 300"
+   git commit -m "Personal website"
    git branch -M main
    git remote add origin https://github.com/GALACTUS06/personal-website.git
    git push -u origin main
