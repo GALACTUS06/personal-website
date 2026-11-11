@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected work by Zicheng Liu in social scene simulation, computer vision, and game design.">
+  <title>Selected Work | Zicheng Liu</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body class="portfolio-page">
+  <a class="portfolio-skip" href="#main">Skip to selected work</a>
+  <header class="site-header portfolio-header">
+    <nav class="nav container" aria-label="Site navigation">
+      <a class="nav__logo" href="../" aria-label="Zicheng Liu, home">
+        <span class="nav__logo-mark" aria-hidden="true">ZL</span>
+        <span>Zicheng Liu</span>
+      </a>
+      <span class="portfolio-current" aria-current="page">Portfolio</span>
+    </nav>
+  </header>
+
+  <main class="container portfolio-main" id="main" tabindex="-1">
+    <header class="portfolio-intro">
+      <h1>Selected Work</h1>
+      <nav aria-label="Projects in this portfolio">
+        <ul class="portfolio-index">
+          <li><a href="#social-tour">Social Tour Simulator</a></li>
+          <li><a href="#egogroups">EgoGroups</a></li>
+          <li><a href="#bei-bi">BEI BI</a></li>
+          <li><a href="#icarus">Icarus</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="portfolio-project portfolio-feature" id="social-tour" aria-labelledby="social-tour-title">
+      <header class="portfolio-project-header">
+        <h2 id="social-tour-title">Social Tour Simulator</h2>
+        <p>Multiview simulation for social group detection</p>
+      </header>
+
+      <div class="demo">
+        <figure class="demo__figure">
+          <div class="demo__screen">
+            <a class="demo__launch" href="media/rv029.mp4" data-demo-play>
+              <img src="media/rv029-poster.webp" width="1920" height="1080" alt="" fetchpriority="high">
+              <span class="demo__button">Play 20-second demo</span>
+            </a>
+            <video class="demo__video" controls playsinline preload="none" poster="media/rv029-poster.webp" aria-label="Social Tour Simulator, seven synchronized views with trajectories" aria-describedby="demo-caption" hidden></video>
+          </div>
+          <figcaption id="demo-caption">Two ego views, four floating views, and one overhead view. The bottom row pairs the overhead image with the trajectory overlay.</figcaption>
+          <p class="demo__error" role="status" hidden>Playback is unavailable in this browser. <a href="media/rv029.mp4">Open the MP4</a>.</p>
+        </figure>
+
+        <dl class="demo__facts">
+          <div><dt>Recorded run</dt><dd><code>rv029</code></dd></div>
+          <div><dt>People</dt><dd>8</dd></div>
+          <div><dt>Synchronized views</dt><dd>7</dd></div>
+          <div><dt>Duration</dt><dd>20 seconds</dd></div>
+        </dl>
+      </div>
+
+      <div class="portfolio-detail">
+        <div class="portfolio-method">
+          <h3>Camera selection</h3>
+          <ol class="method-steps">
+            <li><strong>Screen candidate views</strong><span>Projected skeleton size</span></li>
+            <li><strong>Check rendered visibility</strong><span>Person masks and depth</span></li>
+          </ol>
+          <div class="portfolio-author-copy">
+            <p>We chose a seven-camera layout to simulate a walking tour and record the whole scene. Each of the two egocentric cameras rides on an invisible virtual pedestrian, so the view moves with a walking gait without adding another visible person to the scene. Four floating cameras focus on particular groups for more detailed observations. The overhead camera covers the full scene, and its trajectory overlay shows where each pedestrian stands and how they move.</p>
+            <p>One challenge was getting the model to propose plausible actions and routes for a given setting. Another was getting it to tell different stories in the same or similar settings. We still need more variety to capture how outdoor social encounters change from day to day.</p>
+          </div>
+          <p class="portfolio-limit">Effect on training with real video remains untested.</p>
+        </div>
+
+        <div class="trajectory-pair" role="group" aria-label="Overhead view and trajectories at eight seconds">
+          <figure>
+            <img src="media/rv029-topdown.webp" width="640" height="320" loading="lazy" decoding="async" alt="Overhead view of a simulated street and plaza with pedestrians at the edges.">
+            <figcaption>Overhead view · 0:08</figcaption>
+          </figure>
+          <figure>
+            <img src="media/rv029-paths.webp" width="640" height="320" loading="lazy" decoding="async" alt="The same overhead view with colored trajectories following the sidewalks and plaza.">
+            <figcaption>Trajectory overlay · 0:08</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p class="portfolio-credits">Credits · <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Lim_Event-Driven_Storytelling_with_Multiple_Lifelike_Humans_in_a_3D_Scene_ICCV_2025_paper.html">Event-Driven Storytelling</a> (Lim et al.) · <a href="https://carla.org/">CARLA</a> (simulation and town assets) · <a href="https://github.com/liangxuy/Inter-X">Inter-X</a> (interaction motion)</p>
+    </section>
+
+    <section class="portfolio-project portfolio-secondary" id="egogroups" aria-labelledby="egogroups-title">
+      <header class="portfolio-project-header">
+        <h2 id="egogroups-title">EgoGroups</h2>
+        <p>Collaborative benchmark for social group detection in first-person video</p>
+      </header>
+      <div class="portfolio-project-body">
+        <p class="portfolio-author-copy">I added a section for fine-grained annotation to the team’s annotation tool and recorded a video tutorial for the main tool.</p>
+        <ul class="portfolio-links">
+          <li><a href="https://lab-spell.github.io/EgoGroups/">Project page <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://arxiv.org/abs/2603.22249">arXiv preprint <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="portfolio-project portfolio-secondary" id="bei-bi" aria-labelledby="bei-bi-title">
+      <div>
+        <header class="portfolio-project-header">
+          <h2 id="bei-bi-title">BEI BI</h2>
+          <p>Multiplayer browser-game prototype</p>
+        </header>
+        <p class="portfolio-author-copy">BEI BI started as a card game I came up with in elementary school. I used AI-assisted coding to turn it into a browser game and explore how AI could support game design, development, and testing.</p>
+      </div>
+      <figure class="rank-chart" aria-labelledby="bei-bi-rank-title" aria-describedby="bei-bi-rank-sample">
+        <figcaption>
+          <h3 id="bei-bi-rank-title">Last-place rate by turn position</h3>
+          <p id="bei-bi-rank-sample">150 bot games · 6 players · 50 HP · Combined-score strategy</p>
+        </figcaption>
+        <div class="rank-chart__scale" aria-hidden="true"><span>0%</span><span>20%</span><span>40%</span></div>
+        <ol class="rank-chart__list">
+          <li class="rank-chart__row">
+            <span>Position 1</span>
+            <span class="rank-chart__track" aria-hidden="true"><span class="rank-chart__bar" style="--rate: 38%"></span></span>
+            <strong>38.0%</strong>
+          </li>
+          <li class="rank-chart__row">
+            <span>Position 2</span>
+            <span class="rank-chart__track" aria-hidden="true"><span class="rank-chart__bar" style="--rate: 22.7%"></span></span>
+            <strong>22.7%</strong>
+          </li>
+          <li class="rank-chart__row">
+            <span>Position 3</span>
+            <span class="rank-chart__track" aria-hidden="true"><span class="rank-chart__bar" style="--rate: 16%"></span></span>
+            <strong>16.0%</strong>
+          </li>
+          <li class="rank-chart__row">
+            <span>Position 4</span>
+            <span class="rank-chart__track" aria-hidden="true"><span class="rank-chart__bar" style="--rate: 8%"></span></span>
+            <strong>8.0%</strong>
+          </li>
+          <li class="rank-chart__row">
+            <span>Position 5</span>
+            <span class="rank-chart__track" aria-hidden="true"><span class="rank-chart__bar" style="--rate: 5.3%"></span></span>
+            <strong>5.3%</strong>
+          </li>
+          <li class="rank-chart__row">
+            <span>Position 6</span>
+            <span class="rank-chart__track" aria-hidden="true"><span class="rank-chart__bar" style="--rate: 10%"></span></span>
+            <strong>10.0%</strong>
+          </li>
+        </ol>
+      </figure>
+    </section>
+
+    <section class="portfolio-project portfolio-secondary" id="icarus" aria-labelledby="icarus-title">
+      <div>
+        <header class="portfolio-project-header">
+          <h2 id="icarus-title">Icarus</h2>
+          <p>A Flight Over the Sea · Team course project</p>
+        </header>
+        <p class="portfolio-author-copy">I developed the playable prototype. Flying higher earns more points and brings the wax wings closer to melting. The score from each flight goes into a purse that can buy wings for a single run.</p>
+        <ul class="portfolio-links">
+          <li><a href="https://galactus06.github.io/icarus/">Play Icarus <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/GALACTUS06/icarus">View source <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <figure class="icarus-shot">
+        <img src="../assets/project-icarus.png" width="1570" height="1546" loading="lazy" decoding="async" alt="A winged character flies above the sea, with the sun, clouds, and birds overhead.">
+      </figure>
+    </section>
+  </main>
+
+  <footer class="container portfolio-footer">
+    <a href="../">← Back to homepage</a>
+    <span>Zicheng Liu</span>
+  </footer>
+</body>
+</html>
