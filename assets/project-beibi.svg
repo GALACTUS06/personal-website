@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Illustration of playing cards and a balance chart for the BEI BI game">
+  <defs>
+    <linearGradient id="bbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2c2438"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5efe6"/>
+      <stop offset="100%" stop-color="#e6d8c3"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0c09a"/>
+      <stop offset="100%" stop-color="#e8a878"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a24e"/>
+      <stop offset="100%" stop-color="#c2893e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="320" fill="url(#bbg)"/>
+  <circle cx="90" cy="60" r="85" fill="#c2410c" opacity="0.12"/>
+  <circle cx="570" cy="270" r="95" fill="#d4a24e" opacity="0.1"/>
+
+  <!-- scattered card stack -->
+  <g transform="rotate(-12 140 170)">
+    <rect x="90" y="95" width="100" height="145" rx="12" fill="url(#card1)" opacity="0.95"/>
+    <rect x="106" y="113" width="68" height="10" rx="5" fill="#c2410c" opacity="0.75"/>
+    <rect x="106" y="131" width="46" height="8" rx="4" fill="#1e293b" opacity="0.35"/>
+    <circle cx="140" cy="192" r="18" fill="none" stroke="#c2410c" stroke-width="5" opacity="0.7"/>
+  </g>
+  <g transform="rotate(-4 175 165)">
+    <rect x="125" y="88" width="100" height="145" rx="12" fill="url(#card2)" opacity="0.95"/>
+    <rect x="141" y="106" width="68" height="10" rx="5" fill="#1e293b" opacity="0.8"/>
+    <rect x="141" y="124" width="46" height="8" rx="4" fill="#1e293b" opacity="0.35"/>
+    <path d="M 160 182 L 175 172 L 190 182 L 175 192 Z" fill="#1e293b" opacity="0.6"/>
+    <path d="M 160 202 L 175 192 L 190 202 L 175 212 Z" fill="#1e293b" opacity="0.35"/>
+  </g>
+  <g transform="rotate(8 215 160)">
+    <rect x="165" y="82" width="100" height="145" rx="12" fill="url(#card3)" opacity="0.95"/>
+    <rect x="181" y="100" width="68" height="10" rx="5" fill="#1e293b" opacity="0.85"/>
+    <rect x="181" y="118" width="46" height="8" rx="4" fill="#1e293b" opacity="0.4"/>
+    <text x="215" y="188" font-family="Inter, sans-serif" font-size="30" font-weight="700" fill="#1e293b" text-anchor="middle">6P</text>
+    <rect x="189" y="200" width="52" height="8" rx="4" fill="#1e293b" opacity="0.3"/>
+  </g>
+
+  <!-- balance bar chart card -->
+  <rect x="340" y="56" width="248" height="208" rx="16" fill="#ffffff" opacity="0.96"/>
+  <rect x="364" y="80" width="118" height="10" rx="5" fill="#1e293b" opacity="0.8"/>
+  <rect x="364" y="98" width="80" height="8" rx="4" fill="#1e293b" opacity="0.3"/>
+
+  <!-- mini bar chart (last-place rates) -->
+  <g>
+    <rect x="372" y="148" width="34" height="82" rx="5" fill="#c2410c"/>
+    <rect x="414" y="172" width="34" height="58" rx="5" fill="#d4a24e"/>
+    <rect x="456" y="186" width="34" height="44" rx="5" fill="#e8926a"/>
+    <rect x="498" y="204" width="34" height="26" rx="5" fill="#f0c67c"/>
+    <rect x="540" y="212" width="34" height="18" rx="5" fill="#f5d9a8"/>
+  </g>
+  <line x1="366" y1="230" x2="578" y2="230" stroke="#1e293b" stroke-opacity="0.25" stroke-width="2.5"/>
+
+  <!-- stat badge -->
+  <rect x="382" y="118" width="106" height="22" rx="11" fill="#c2410c"/>
+  <text x="435" y="133" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">150 bot games</text>
+
+  <!-- decorative dots -->
+  <g fill="#ffffff" opacity="0.28">
+    <circle cx="312" cy="48" r="4"/>
+    <circle cx="330" cy="48" r="4"/>
+    <circle cx="348" cy="48" r="4"/>
+    <circle cx="60" cy="286" r="4"/>
+    <circle cx="78" cy="286" r="4"/>
+    <circle cx="96" cy="286" r="4"/>
+  </g>
+</svg>
