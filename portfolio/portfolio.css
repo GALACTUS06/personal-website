@@ -92,6 +92,11 @@
   line-height: 1.45;
 }
 
+.portfolio-project-header .portfolio-role {
+  color: var(--color-ink);
+  font-size: 0.92rem;
+}
+
 .demo {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(9.5rem, 15%);
@@ -163,7 +168,7 @@
 .demo__facts dd { font-weight: 700; }
 
 .demo__figure figcaption,
-.trajectory-pair figcaption,
+.portfolio-image-pair figcaption,
 .demo__error {
   margin-top: 0.5rem;
   color: var(--color-ink-soft);
@@ -200,14 +205,19 @@
 
 .portfolio-limit { margin-top: 0.85rem; font-size: 0.88rem; }
 
-.trajectory-pair {
+.portfolio-visuals {
+  display: grid;
+  align-self: start;
+  gap: 1rem;
+}
+
+.portfolio-image-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-self: start;
   gap: 0.75rem;
 }
 
-.trajectory-pair img,
+.portfolio-image-pair img,
 .icarus-shot img {
   width: 100%;
   height: auto;
@@ -238,6 +248,13 @@
   color: var(--color-ink-soft);
   font-size: 0.84rem;
   line-height: 1.4;
+}
+
+.rank-chart__note {
+  margin-top: 0.85rem;
+  color: var(--color-ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.5;
 }
 
 .rank-chart__scale {
@@ -316,5 +333,5 @@
 
 @media (max-width: 420px) {
   .demo__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .trajectory-pair { grid-template-columns: 1fr; }
+  .portfolio-image-pair { grid-template-columns: 1fr; }
 }
