@@ -42,6 +42,7 @@
       <header class="portfolio-project-header">
         <h2 id="social-tour-title">Social Tour Simulator</h2>
         <p>Multiview simulation for social group detection</p>
+        <p class="portfolio-role"><strong>My role</strong> · Designed the seven-camera layout and the walking-route planning approach, with AI-assisted implementation.</p>
       </header>
 
       <div class="demo">
@@ -73,21 +74,33 @@
             <li><strong>Check rendered visibility</strong><span>Person masks and depth</span></li>
           </ol>
           <div class="portfolio-author-copy">
-            <p>We chose a seven-camera layout to simulate a walking tour and record the whole scene. Each of the two egocentric cameras rides on an invisible virtual pedestrian, so the view moves with a walking gait without adding another visible person to the scene. Four floating cameras focus on particular groups for more detailed observations. The overhead camera covers the full scene, and its trajectory overlay shows where each pedestrian stands and how they move.</p>
-            <p>One challenge was getting the model to propose plausible actions and routes for a given setting. Another was getting it to tell different stories in the same or similar settings. We still need more variety to capture how outdoor social encounters change from day to day.</p>
+            <p>I chose two egocentric views for the walking tour, four floating views to observe particular groups in more detail, and an overhead view with a trajectory overlay for the whole scene. The two egocentric cameras are independent sensors that follow planned routes frame by frame at pedestrian eye height, with a small vertical bob to simulate a walking gait.</p>
+            <p>A person inside the frame can still be occluded or too small to distinguish. The planner screens candidate floating views using projected skeleton size, then checks rendered depth and person-ID masks for visibility. In <code>rv029</code>, all four floating views recorded zero measured near-camera obstruction from static geometry, and all eight person IDs appeared across the six non-overhead views.</p>
           </div>
-          <p class="portfolio-limit">Effect on training with real video remains untested.</p>
+          <p class="portfolio-limit">Whether training with this synthetic data improves social group detection on real videos remains untested.</p>
         </div>
 
-        <div class="trajectory-pair" role="group" aria-label="Overhead view and trajectories at eight seconds">
-          <figure>
-            <img src="media/rv029-topdown.webp" width="640" height="320" loading="lazy" decoding="async" alt="Overhead view of a simulated street and plaza with pedestrians at the edges.">
-            <figcaption>Overhead view · 0:08</figcaption>
-          </figure>
-          <figure>
-            <img src="media/rv029-paths.webp" width="640" height="320" loading="lazy" decoding="async" alt="The same overhead view with colored trajectories following the sidewalks and plaza.">
-            <figcaption>Trajectory overlay · 0:08</figcaption>
-          </figure>
+        <div class="portfolio-visuals">
+          <div class="portfolio-image-pair" role="group" aria-label="RGB and person-ID preview from the same simulated frame">
+            <figure>
+              <img src="media/rv029-rgb.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Floating-camera frame with three simulated pedestrians on a paved plaza.">
+              <figcaption>Rendered RGB frame</figcaption>
+            </figure>
+            <figure>
+              <img src="media/rv029-person-ids.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="The same frame with each visible person shown in a separate color on black.">
+              <figcaption>Person-ID preview · Same frame</figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-image-pair" role="group" aria-label="Overhead view and trajectories at eight seconds">
+            <figure>
+              <img src="media/rv029-topdown.webp" width="640" height="320" loading="lazy" decoding="async" alt="Overhead view of a simulated street and plaza with pedestrians at the edges.">
+              <figcaption>Overhead view · 0:08</figcaption>
+            </figure>
+            <figure>
+              <img src="media/rv029-paths.webp" width="640" height="320" loading="lazy" decoding="async" alt="The same overhead view with colored trajectories following the sidewalks and plaza.">
+              <figcaption>Trajectory overlay · 0:08</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
 
@@ -116,7 +129,7 @@
         </header>
         <p class="portfolio-author-copy">BEI BI started as a card game I came up with in elementary school. I used AI-assisted coding to turn it into a browser game and explore how AI could support game design, development, and testing.</p>
       </div>
-      <figure class="rank-chart" aria-labelledby="bei-bi-rank-title" aria-describedby="bei-bi-rank-sample">
+      <figure class="rank-chart" aria-labelledby="bei-bi-rank-title" aria-describedby="bei-bi-rank-sample bei-bi-rank-note">
         <figcaption>
           <h3 id="bei-bi-rank-title">Last-place rate by turn position</h3>
           <p id="bei-bi-rank-sample">150 bot games · 6 players · 50 HP · Combined-score strategy</p>
@@ -154,6 +167,7 @@
             <strong>10.0%</strong>
           </li>
         </ol>
+        <p class="rank-chart__note" id="bei-bi-rank-note">Win rates miss which positions are most often eliminated first. A follow-up would test adding an end-of-turn refill alongside the current start-of-turn refill.</p>
       </figure>
     </section>
 
