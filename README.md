@@ -20,10 +20,11 @@ Personal Website/
 │   ├── about-photo.jpg     # About-section photo
 │   ├── project-agentic.png # Project banner: agentic financial workflow
 │   ├── project-rule72.png  # Project banner: multi-agent demo
-│   ├── project-icarus.png  # Project banner: Icarus canvas game
-│   ├── project-beibi.svg   # Project banner: BEI BI game
-│   ├── project-atlas.png   # Project banner: D3 player value dashboard
-│   ├── github.svg          # GitHub logo (contact section)
+│   ├── project-icarus.png          # Project banner: Icarus canvas game
+│   ├── project-beyond-tuition.png  # Project banner: Beyond-Tuition dashboard
+│   ├── project-beibi.svg           # Project banner: BEI BI game
+│   ├── project-atlas.png           # Project banner: D3 player value dashboard
+│   ├── github.svg                  # GitHub logo (contact section)
 │   └── favicon.svg         # Browser tab icon
 ├── 素材/               # Source material (originals, PDFs, retired placeholders)
 └── README.md

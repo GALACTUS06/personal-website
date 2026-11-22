@@ -218,10 +218,22 @@
 }
 
 .portfolio-image-pair img,
-.icarus-shot img {
+.icarus-shot img,
+.beyond-shot img {
   width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
+}
+
+.beyond-shot {
+  align-self: start;
+}
+
+.beyond-shot figcaption {
+  margin-top: 0.5rem;
+  color: var(--color-ink-soft);
+  font-size: 0.83rem;
+  line-height: 1.5;
 }
 
 .portfolio-credits {
