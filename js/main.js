@@ -114,8 +114,7 @@
     ];
 
     if (reduceMotion) {
-      // Static fallback: show every role at once
-      typeTarget.textContent = roles.join(" · ");
+      typeTarget.textContent = "researcher, builder, and gamer";
     } else {
       let roleIndex = 0;
       let charIndex = roles[0].length;
@@ -153,11 +152,8 @@
 
   /* ---------- Interactive particle background (full page) ---------- */
   const canvas = document.getElementById("page-particles");
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
 
-  if (canvas && canvas.getContext && !prefersReducedMotion) {
+  if (canvas && canvas.getContext && !reduceMotion) {
     const ctx = canvas.getContext("2d");
 
     let width = 0;
@@ -368,100 +364,5 @@
 
     resize();
     animationId = window.requestAnimationFrame(step);
-  }
-
-  /* ---------- Identity chips orbiting the portrait ring ---------- */
-  const orbitWrap = document.querySelector(".hero__portrait-wrap");
-  const orbitChips = Array.from(document.querySelectorAll(".hero__badge"));
-
-  if (orbitWrap && orbitChips.length) {
-    // Start angles put the chips at the four corners (deg, y-down screen coords)
-    const START_ANGLES = [225, 315, 45, 135];
-    // Every chip keeps its own pace (deg per second)
-    const SPEEDS = [10, 14, 19, 25];
-
-    const orbit = orbitChips.map(function (el, i) {
-      return {
-        el: el,
-        angle: START_ANGLES[i] !== undefined ? START_ANGLES[i] : i * 90,
-        speed: SPEEDS[i] !== undefined ? SPEEDS[i] : 14,
-        boost: 0,
-        paused: false,
-      };
-    });
-
-    let orbitCx = 0;
-    let orbitCy = 0;
-    let orbitR = 0;
-
-    function orbitMeasure() {
-      orbitCx = orbitWrap.clientWidth / 2;
-      orbitCy = orbitWrap.clientHeight / 2;
-      orbitR = orbitCx + 14; // chips ride exactly on the dashed ring line
-    }
-
-    function orbitPlace() {
-      for (let i = 0; i < orbit.length; i++) {
-        const c = orbit[i];
-        const rad = (c.angle * Math.PI) / 180;
-        const x = orbitCx + orbitR * Math.cos(rad);
-        const y = orbitCy + orbitR * Math.sin(rad);
-        c.el.style.transform =
-          "translate(" + x + "px, " + y + "px) translate(-50%, -50%)";
-      }
-    }
-
-    orbitMeasure();
-    orbitPlace();
-
-    window.addEventListener("resize", function () {
-      orbitMeasure();
-      orbitPlace();
-    });
-
-    if (!prefersReducedMotion) {
-      let orbitLast = 0;
-
-      function orbitStep(ts) {
-        if (!orbitLast) orbitLast = ts;
-        const dt = Math.min((ts - orbitLast) / 1000, 0.1);
-        orbitLast = ts;
-
-        for (let i = 0; i < orbit.length; i++) {
-          const c = orbit[i];
-          if (c.paused) continue; // hovering freezes the chip for a precise click
-          if (c.boost > 0) {
-            c.boost *= Math.exp(-dt * 1.2); // ease the boost back to normal
-            if (c.boost < 0.01) c.boost = 0;
-          }
-          c.angle = (c.angle + (c.speed + c.boost) * dt) % 360;
-        }
-
-        orbitPlace();
-        window.requestAnimationFrame(orbitStep);
-      }
-
-      window.requestAnimationFrame(orbitStep);
-
-      // Hover freezes a chip in place; clicking speeds up ONLY that chip
-      orbit.forEach(function (c) {
-        c.el.addEventListener("mouseenter", function () {
-          c.paused = true;
-        });
-        c.el.addEventListener("mouseleave", function () {
-          c.paused = false;
-        });
-        c.el.addEventListener("click", function () {
-          // Every click adds the same fixed extra speed (deg/s), regardless of pace
-          c.boost = Math.min(c.boost + 75, 250);
-          c.paused = false; // let it dart away so the boost is visible
-          // Quick pop so the burst of speed is clearly visible
-          c.el.style.scale = "1.3";
-          window.setTimeout(function () {
-            c.el.style.scale = "";
-          }, 250);
-        });
-      });
-    }
   }
 })();

@@ -1,5 +1,6 @@
 .portfolio-page {
-  background: var(--color-bg);
+  --color-bg: #eef4f8;
+  --color-bg-alt: #e0eaf1;
 }
 
 .portfolio-page :focus-visible {
@@ -28,20 +29,9 @@
   border-color: var(--color-line);
 }
 
-.portfolio-current {
-  color: var(--color-ink-soft);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
 .portfolio-main { padding-top: calc(var(--header-height) + 2.7rem); }
 
 .portfolio-intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 1rem 2rem;
   padding-bottom: 1.55rem;
 }
 
@@ -58,7 +48,12 @@
   letter-spacing: -0.052em;
 }
 
-.portfolio-index,
+.portfolio-subtitle {
+  margin-top: 0.45rem;
+  color: var(--color-ink-soft);
+  font-size: 1.1rem;
+}
+
 .portfolio-links {
   display: flex;
   flex-wrap: wrap;
@@ -67,8 +62,6 @@
   font-weight: 600;
 }
 
-.portfolio-index a { color: var(--color-ink-soft); }
-.portfolio-index a:hover,
 .portfolio-links a:hover,
 .portfolio-credits a:hover,
 .portfolio-footer a:hover { text-decoration: underline; }

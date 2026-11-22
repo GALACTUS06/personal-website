@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zicheng Liu — researcher, gamer, and builder working across computer vision, agentic AI systems, and data-driven visualization. Explore my research, projects, and experience." />
+  <meta name="description" content="Research, projects, and experience from Zicheng Liu, a researcher and builder working in computer vision, AI, and data visualization." />
   <meta name="author" content="Zicheng Liu" />
   <meta name="keywords" content="Zicheng Liu, AI, computer vision, agentic AI, data visualization, Stony Brook University, research" />
   <meta property="og:type" content="website" />
@@ -26,31 +26,31 @@
   <canvas class="page-particles" id="page-particles" aria-hidden="true"></canvas>
 
   <!-- ============ NAVIGATION ============ -->
-  <header class="site-header" id="top">
+  <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="#top" class="nav__logo" aria-label="Back to top">
+      <a href="#top" class="nav__logo" aria-label="Zicheng Liu, back to top">
         <span class="nav__logo-mark">ZL</span>
         <span class="nav__logo-text">Zicheng Liu</span>
       </a>
-      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="home-navigation">
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
       </button>
-      <ul class="nav__menu">
+      <ul class="nav__menu" id="home-navigation">
         <li><a href="#about" class="nav__link">About</a></li>
         <li><a href="#education" class="nav__link">Education</a></li>
         <li><a href="#research" class="nav__link">Research</a></li>
-        <li><a href="portfolio/" class="nav__link">Portfolio</a></li>
         <li><a href="#projects" class="nav__link">Projects</a></li>
         <li><a href="#experience" class="nav__link">Experience</a></li>
         <li><a href="#skills" class="nav__link">Skills</a></li>
-        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="portfolio/" class="nav__link nav__link--cta">Portfolio</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="top" tabindex="-1">
 
     <!-- ============ HERO ============ -->
     <section class="hero">
@@ -69,13 +69,12 @@
             <span class="hero__typewriter-cursor" aria-hidden="true">|</span>
           </p>
           <p class="hero__subtitle">
-            I build AI agents, interactive tools, and the occasional gaming rig —
-            <em>grounded in research, driven by curiosity</em>.
+            I build AI agents, interactive tools, and the occasional gaming rig.
+            <em>Curiosity gets me started, and research helps me test what works.</em>
           </p>
           <p class="hero__desc">
-            A researcher, builder, and gamer who works across computer vision
-            datasets, agentic AI systems, and data-driven visualization — turning
-            curious ideas into reproducible, human-friendly technology.
+            My projects span computer vision datasets, AI systems, and data-driven visualization.
+            I like building things that other people can use and reproduce.
           </p>
           <div class="hero__actions">
             <a href="portfolio/" class="btn btn--primary">View Portfolio</a>
@@ -83,38 +82,18 @@
           </div>
           <ul class="hero__stats" aria-label="Quick facts">
             <li><strong>3.88</strong><span>GPA at SBU</span></li>
-            <li><strong>1</strong><span>arXiv Publication</span></li>
+            <li><strong>1</strong><span>arXiv Preprint</span></li>
             <li><strong>2</strong><span>Research Projects</span></li>
             <li><strong>20+</strong><span>Tech Tutorials Co-created</span></li>
           </ul>
         </div>
         <div class="hero__media">
           <div class="hero__portrait-wrap">
-            <img src="assets/avatar.png" alt="Portrait of Zicheng Liu" class="hero__portrait" />
+            <img src="assets/avatar.png" width="608" height="608" alt="Portrait of Zicheng Liu" class="hero__portrait" />
             <div class="hero__portrait-ring" aria-hidden="true"></div>
-          </div>
-          <div class="hero__badge" aria-hidden="true">
-            <span class="hero__badge-icon">🎮</span>
-            <span>Gamer</span>
-          </div>
-          <div class="hero__badge" aria-hidden="true">
-            <span class="hero__badge-icon">🤖</span>
-            <span>AI Explorer</span>
-          </div>
-          <div class="hero__badge" aria-hidden="true">
-            <span class="hero__badge-icon">🔧</span>
-            <span>Hardware Nerd</span>
-          </div>
-          <div class="hero__badge" aria-hidden="true">
-            <span class="hero__badge-icon">🤝</span>
-            <span>Community Builder</span>
           </div>
         </div>
       </div>
-      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
-        <span class="hero__scroll-mouse" aria-hidden="true"></span>
-        <span>Scroll</span>
-      </a>
     </section>
 
     <!-- ============ ABOUT ============ -->
@@ -126,71 +105,53 @@
           <div class="section__line" aria-hidden="true"></div>
         </header>
         <div class="about__grid">
-          <div class="about__media">
-            <img src="assets/about-photo.jpg" alt="Zicheng Liu presenting his research at a symposium" class="about__image" />
-            <div class="about__funfact">
-              <h3>When I'm not coding…</h3>
-              <p>
-                You can find me at Lenovo innovation forums, testing the latest
-                hardware, or co-designing interactive demo stations in flagship
-                stores. I love translating real user pain points into better
-                technology.
-              </p>
-            </div>
-          </div>
+          <figure class="about__media">
+            <img src="assets/about-photo.jpg" width="1254" height="1254" loading="lazy" decoding="async" alt="Illustration of a raised hand on a rain-soaked city street at night." class="about__image" />
+            <figcaption>Illustration generated with ChatGPT</figcaption>
+          </figure>
           <div class="about__text">
             <h3 class="about__heading">
-              A curious builder who connects technology, research, and people.
+              From opening up a PC to building research tools
             </h3>
             <p>
-              My journey started with a simple habit: taking things apart to see
-              how they work. That curiosity grew from PC hardware diagnostics into
-              programming, and eventually into research on how machines understand
-              people — from detecting social groups in egocentric video to
-              generating lifelike crowd animations in virtual cities.
+              I once opened up a computer to add a hard drive. Taking things apart to see how
+              they worked got me interested in troubleshooting PCs, then in programming and
+              computer vision research.
             </p>
             <p>
-              Today, I work in Stony Brook's Synthetic Perception and Learning Lab,
-              where I contribute to <strong>EgoGroups</strong>, a large-scale
-              benchmark for detecting social groups in the wild, and I lead an
-              independent subproject that brings event-driven storytelling to
-              CARLA/OpenMap city environments. Along the way, I have built agentic
-              financial-analysis pipelines on AWS Bedrock and data-driven web
-              applications deployed with GitHub Actions.
+              At Stony Brook's Synthetic Perception and Learning Lab, I work on
+              <strong>EgoGroups</strong>, where we study how people form groups in walking-tour
+              videos. I also design simulated walking tours with <strong>Social Tour Simulator</strong>,
+              which lets me choose what different cameras can observe.
             </p>
-            <p>
-              What drives me is the space where rigorous systems meet human
-              experience. Whether I am annotating video frames, scripting walking-tour
-              renders, or designing a web interface, I care about work that is
-              reproducible, accessible, and genuinely useful to the people who
-              interact with it. I am currently open to research collaborations,
-              internships, and team projects in AI, computer vision, and interactive
-              media.
-            </p>
-            <ul class="about__highlights">
-              <li>
-                <span class="about__highlight-icon" aria-hidden="true">🌏</span>
-                <div>
-                  <strong>Dual-degree, dual-culture perspective</strong>
-                  <p>Studying in both the U.S. and China, fluent in English and Chinese.</p>
-                </div>
-              </li>
-              <li>
-                <span class="about__highlight-icon" aria-hidden="true">🤝</span>
-                <div>
-                  <strong>Community-minded</strong>
-                  <p>Active Lenovo "Hardcore Fan" contributor shaping real products since 2023.</p>
-                </div>
-              </li>
-              <li>
-                <span class="about__highlight-icon" aria-hidden="true">⚙️</span>
-                <div>
-                  <strong>Hands-on engineer</strong>
-                  <p>From GPU thermal interfaces to annotation tools — I build what I need.</p>
-                </div>
-              </li>
-            </ul>
+            <div class="about__funfact">
+              <h4>When I'm not coding…</h4>
+              <p>I test hardware, trade notes with other Lenovo fans, and help design demos people can try in stores.</p>
+            </div>
           </div>
+          <ul class="about__highlights">
+            <li>
+              <span class="about__highlight-icon" aria-hidden="true">🌏</span>
+              <div>
+                <strong>Dual-degree student</strong>
+                <p>Studying in China and the U.S.</p>
+              </div>
+            </li>
+            <li>
+              <span class="about__highlight-icon" aria-hidden="true">🤝</span>
+              <div>
+                <strong>Community-minded</strong>
+                <p>Part of Lenovo's Hardcore Fan community since 2023.</p>
+              </div>
+            </li>
+            <li>
+              <span class="about__highlight-icon" aria-hidden="true">⚙️</span>
+              <div>
+                <strong>Hands-on engineer</strong>
+                <p>From GPU cooling to tools for video annotators.</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -244,16 +205,14 @@
             <span class="research-card__date">Summer 2026</span>
           </div>
           <div class="research-card__body">
-            <h3>Outdoor Event-Driven Storytelling on CARLA / OpenMap City Stages</h3>
+            <h3>Outdoor Event-Driven Storytelling</h3>
             <p class="research-card__role">
               Independent Summer Research Subproject &nbsp;·&nbsp;
               Advised by Prof. Paola Cascante-Bonilla
             </p>
             <ul class="research-card__points">
-              <li>Constructed outdoor city stages from CARLA/OpenMap assets exported as USD tiles, and adapted walkable maps to keep agents safely on sidewalks.</li>
-              <li>Extended Event-Driven Storytelling (EDS) to CARLA-derived environments by mapping prompts to structured social events and generating sidewalk-constrained trajectories through motion matching.</li>
-              <li>Developed a fully scripted demonstration pipeline in which coding agents authored, debugged, and retargeted crowd layouts — baking walk, chat, hug, and wave segments into reproducible Python walking-tour renders.</li>
-              <li>Demonstrated multi-agent films across diverse city tiles under tour, commute, and gathering layouts, improving motion diversity and realism while reducing collisions and clipping artifacts.</li>
+              <li>I turned CARLA and OpenMap tiles into outdoor stages and adapted the routes so simulated crowds stayed on sidewalks.</li>
+              <li>With coding agents, I built a way to stage walks, chats, hugs, and waves and render them as repeatable walking-tour clips.</li>
             </ul>
             <ul class="tag-list" aria-label="Technologies used">
               <li class="tag">CARLA</li>
@@ -270,16 +229,14 @@
             <span class="research-card__date">Sep. 2025 – Present</span>
           </div>
           <div class="research-card__body">
-            <h3>EgoGroups — A Large-Scale Dataset for Detecting Groups of People in the Wild</h3>
+            <h3>EgoGroups</h3>
             <p class="research-card__role">
               Synthetic Perception and Learning Lab &nbsp;·&nbsp;
               Advised by Prof. Paola Cascante-Bonilla
             </p>
             <ul class="research-card__points">
-              <li>Contributed to EgoGroups, a large-scale dataset capturing social group behavior from walking-tour videos recorded in cities worldwide.</li>
-              <li>Performed video- and frame-level annotation of group membership and social interactions according to standardized labeling guidelines.</li>
-              <li>Modified annotation and preprocessing scripts and added lightweight tooling to streamline data handling, quality control, and annotation workflows.</li>
-              <li>Expanded the annotation tool with a fine-grained behavioral module and produced an onboarding tutorial to help new annotators maintain consistent labeling standards.</li>
+              <li>I watched walking-tour footage and labeled who was in each group and how people interacted.</li>
+              <li>I added a section for fine-grained behavior annotation to the team's tool and recorded a tutorial for new annotators.</li>
             </ul>
             <ul class="tag-list" aria-label="Technologies used">
               <li class="tag">Python</li>
@@ -295,13 +252,18 @@
           <div class="publication__body">
             <h3>Publication</h3>
             <p>
+              In EgoGroups, we use first-person walking-tour videos from cities around the world to study
+              how models tell which people are together. We compare language and vision-language models
+              with supervised baselines and report how detection performance varies with crowd density and region.
+            </p>
+            <p>
               Jeffri Murrugarra-Llerena, Pranav Chitale, <strong>Zicheng Liu</strong>,
               Kai Ao, Yujin Ham, Guha Balakrishnan, and Paola Cascante-Bonilla (2026).
               <em>EgoGroups: A Benchmark for Detecting Social Groups of People in the Wild.</em>
               arXiv preprint arXiv:2603.22249.
             </p>
             <a class="publication__link" href="https://arxiv.org/abs/2603.22249" target="_blank" rel="noopener noreferrer">
-              Read on arXiv →
+              Read the preprint on arXiv
             </a>
           </div>
         </aside>
@@ -328,22 +290,15 @@
               <ul class="tag-list" aria-label="Technologies used">
                 <li class="tag">CARLA</li>
                 <li class="tag">Python</li>
-                <li class="tag">SMPL-X</li>
-                <li class="tag">Blender</li>
+                <li class="tag">Synthetic data</li>
               </ul>
               <p>
-                A multiview simulation platform that stages social group behavior
-                in real city environments — two ego views, four floating cameras,
-                and one overhead view recorded in perfect sync, driven by
-                structured events, sidewalk-constrained motion matching, and
-                SMPL-X crowd rendering.
+                Seven synchronized cameras record a simulated walking tour from street level,
+                from floating views focused on groups, and from overhead. The simulator also
+                records who is visible and where each person walks.
               </p>
-              <ul class="project-card__points">
-                <li>Seven synchronized camera views simulate walking tours for social group detection research</li>
-                <li>Weather, layout, and story events produce reproducible multi-agent scene variations</li>
-              </ul>
               <a class="project-card__link" href="portfolio/#social-tour">
-                Watch the demo →
+                Watch the demo in Portfolio
               </a>
             </div>
           </article>
@@ -360,16 +315,12 @@
                 <li class="tag">AI-Assisted Dev</li>
               </ul>
               <p>
-                A multiplayer browser-game prototype that began as a card game I
-                invented in elementary school. Built with AI-assisted coding to
-                explore how AI can support game design, development, and testing.
+                I came up with this card game in elementary school and built a browser prototype
+                with AI-assisted coding. In one set of 150 six-player bot games, the player in the
+                first turn position finished last 38% of the time.
               </p>
-              <ul class="project-card__points">
-                <li>150 bot-game balance study reveals position-1 win-rate bias (38% last-place rate)</li>
-                <li>Turn order, combined-score strategy, and 6-player matches documented for iteration</li>
-              </ul>
               <a class="project-card__link" href="portfolio/#bei-bi">
-                See the balance study →
+                Read the balance study in Portfolio
               </a>
             </div>
           </article>
@@ -379,27 +330,23 @@
               <img src="assets/project-icarus.png" alt="" />
             </div>
             <div class="project-card__body">
-              <h3>Icarus — Canvas Flight Game</h3>
+              <h3>Icarus</h3>
               <ul class="tag-list" aria-label="Technologies used">
                 <li class="tag">JavaScript</li>
                 <li class="tag">HTML Canvas</li>
                 <li class="tag">CSS</li>
               </ul>
               <p>
-                A one-page canvas flight game over the sea: hold to climb, keep
-                the wax away from the sun, dodge gulls and sea creatures, and
-                ride leaning updraft columns through five shifting weather spells.
+                Hold to climb over the sea. Flying higher earns points faster, and the sun
+                melts your wax wings if you stay up too long. I built the playable prototype
+                for our course project.
               </p>
-              <ul class="project-card__points">
-                <li>A full in-game economy: four wing tiers bought in the hangar and persisted in localStorage</li>
-                <li>Weather rewrites the rules mid-flight — heat melts wax faster, night hides nearby hazards</li>
-              </ul>
               <div class="project-card__links">
                 <a class="project-card__link" href="https://galactus06.github.io/icarus/" target="_blank" rel="noopener noreferrer">
-                  Play now →
+                  Play Icarus
                 </a>
                 <a class="project-card__link project-card__link--ghost" href="https://github.com/GALACTUS06/icarus" target="_blank" rel="noopener noreferrer">
-                  Source →
+                  View source
                 </a>
               </div>
             </div>
@@ -410,27 +357,23 @@
               <img src="assets/project-beyond-tuition.png" alt="" />
             </div>
             <div class="project-card__body">
-              <h3>Beyond-Tuition — College ROI Explorer</h3>
+              <h3>Beyond-Tuition</h3>
               <ul class="tag-list" aria-label="Technologies used">
                 <li class="tag">JavaScript / D3.js</li>
                 <li class="tag">Python</li>
                 <li class="tag">Scikit-learn</li>
               </ul>
               <p>
-                A single-screen linked visual analytics dashboard for comparing
-                affordability and student outcomes across U.S. bachelor's-degree
-                institutions, built from College Scorecard, BLS, and ACS data.
+                Compare college costs, completion rates, debt, and earnings across 1,637 U.S.
+                institutions. A selection in one of the six views updates the others, so you
+                can see how costs and outcomes vary by location and institution type.
               </p>
-              <ul class="project-card__points">
-                <li>Six coordinated views connect state, sector, cost, completion, earnings, debt, and similarity filters</li>
-                <li>PCA, k-means clustering, and MDS support exploration; reproducible tests audit the single-screen layout</li>
-              </ul>
               <div class="project-card__links">
                 <a class="project-card__link" href="https://galactus06.github.io/Beyond-Tuition/" target="_blank" rel="noopener noreferrer">
-                  Open dashboard →
+                  Open dashboard
                 </a>
                 <a class="project-card__link project-card__link--ghost" href="https://github.com/GALACTUS06/Beyond-Tuition" target="_blank" rel="noopener noreferrer">
-                  Source →
+                  View source
                 </a>
               </div>
             </div>
@@ -448,17 +391,11 @@
                 <li class="tag">Meta Llama 3</li>
               </ul>
               <p>
-                A multi-agent financial education system where a TeacherAgent and
-                a CalculatorAgent cooperate through AWS Bedrock: one explains
-                concepts in natural language, the other does the math and plots
-                growth charts.
+                Ask how long money takes to double at 8%, or compare several rates. One agent
+                explains the Rule of 72, and a calculator works out the numbers and plots the growth.
               </p>
-              <ul class="project-card__points">
-                <li>Supports questions like "At 8%", "compare 6%, 8%, 10%", and "plot Growth 6000 at 8%"</li>
-                <li>Modular agent/tool architecture with secure credential handling and a validation path without AWS</li>
-              </ul>
               <a class="project-card__link" href="https://github.com/GALACTUS06/rule-of-72-multi-agent-demo" target="_blank" rel="noopener noreferrer">
-                View on GitHub →
+                View on GitHub
               </a>
             </div>
           </article>
@@ -475,17 +412,12 @@
                 <li class="tag">Pandas</li>
               </ul>
               <p>
-                A CLI-orchestrated financial analysis workflow that uses AWS Bedrock
-                for plan generation and transaction categorization, paired with
-                deterministic Python modules for KPI computation and monthly
-                summaries.
+                A command-line demo that turns four months of synthetic transactions into
+                monthly reports. AWS Bedrock plans the workflow and categorizes transactions.
+                Python calculates the totals.
               </p>
-              <ul class="project-card__points">
-                <li>Processed four months of synthetic transaction data into reproducible categorized records</li>
-                <li>Generated KPI reports and summary artifacts with externalized model, region, and credential configuration</li>
-              </ul>
               <a class="project-card__link" href="https://github.com/GALACTUS06/agentic-financial-insights-workflow" target="_blank" rel="noopener noreferrer">
-                View on GitHub →
+                View on GitHub
               </a>
             </div>
           </article>
@@ -495,23 +427,19 @@
               <img src="assets/project-atlas.png" alt="" />
             </div>
             <div class="project-card__body">
-              <h3>Player Value Atlas — D3 Visualization</h3>
+              <h3>Player Value Atlas</h3>
               <ul class="tag-list" aria-label="Technologies used">
                 <li class="tag">JavaScript / D3.js</li>
                 <li class="tag">Python</li>
                 <li class="tag">HTML/CSS</li>
               </ul>
               <p>
-                An interactive D3.js visualization exploring soccer player
-                performance and market value across a reproducible fused dataset
-                of 59,137 player-season records from Europe's top five leagues.
+                Explore how soccer player performance and market value are related using
+                scatterplots and histograms. The dataset includes 59,137 player-season-team
+                records from Europe's top five leagues.
               </p>
-              <ul class="project-card__points">
-                <li>Scatterplots, histograms, and category counts with jitter for mixed axes and rich tooltips</li>
-                <li>Python data-fusion pipeline with automated quality reports and a 21-attribute verified dataset</li>
-              </ul>
               <a class="project-card__link" href="https://github.com/GALACTUS06/football-player-value-lab" target="_blank" rel="noopener noreferrer">
-                View on GitHub →
+                View on GitHub
               </a>
             </div>
           </article>
@@ -530,17 +458,12 @@
 
         <article class="exp-card reveal">
           <div class="exp-card__header">
-            <div>
-              <h3>Lenovo Consumer — Hardcore Fan Member</h3>
-              <p class="exp-card__meta">Aug. 2023 – Present</p>
-            </div>
-            <div class="exp-card__logo" aria-hidden="true">💻</div>
+            <h3>Lenovo Consumer · Hardcore Fan Member</h3>
+            <p class="exp-card__meta">Aug. 2023 – Present</p>
           </div>
           <ul class="exp-card__points">
-            <li>Participated in 10+ innovation forums with Lenovo's marketing and engineering teams, analyzing user behavior data to co-develop 20+ tech tutorials that boosted social media engagement.</li>
-            <li>Provided UX feedback that directly shaped 3 iterations of the DuoSun (DSA) app, particularly in streamlining its thermal monitoring interface for gamers.</li>
-            <li>Attended flagship launches (Legion 2024, Yoga Book 9i), gaining rare access to engineers' thermal management solutions and advocating successfully for dual-screen demo stations in 5 flagship stores.</li>
-            <li>Co-designed "Flip-and-Test" interactive stations that increased customer dwell time by 25% and led 2 post-launch roundtables, translating user pain points into actionable recommendations.</li>
+            <li>I took part in Lenovo's innovation forums and helped make more than 20 tech tutorials.</li>
+            <li>I gave feedback on how the DuoSun app shows temperatures and helped design in-store demos where visitors could try dual-screen devices.</li>
           </ul>
         </article>
       </div>
@@ -557,14 +480,15 @@
 
         <div class="skills__grid">
           <div class="skill-group reveal">
-            <h3 class="skill-group__title"><span aria-hidden="true">🧠</span> Programming</h3>
-            <ul class="skill-group__list">
+            <h3 class="skill-group__title"><span aria-hidden="true">🧠</span> Programming &amp; Languages</h3>
+            <ul class="skill-group__list" aria-label="Programming languages">
               <li>Python</li>
               <li>Java</li>
               <li>C</li>
               <li>SQL</li>
               <li>JavaScript</li>
             </ul>
+            <p class="skill-group__languages">Native Mandarin Chinese · Fluent English</p>
           </div>
           <div class="skill-group reveal">
             <h3 class="skill-group__title"><span aria-hidden="true">🛠️</span> Tools &amp; Platforms</h3>
@@ -596,13 +520,6 @@
               <li>Data recovery</li>
             </ul>
           </div>
-          <div class="skill-group reveal">
-            <h3 class="skill-group__title"><span aria-hidden="true">🌐</span> Languages</h3>
-            <ul class="skill-group__list">
-              <li>Mandarin Chinese — Native</li>
-              <li>English — Fluent</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
@@ -619,7 +536,7 @@
           I'm currently open to research collaborations, internships, and
           project teams in AI, computer vision, and interactive media. Whether
           you have a question, an idea, or just want to say hi, my inbox is
-          always open — I'd love to hear from you!
+          always open. I'd love to hear from you.
         </p>
         <div class="contact__grid">
           <a class="contact-card" href="mailto:zicheng.liu@stonybrook.edu">
@@ -642,7 +559,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span id="year">2026</span> Zicheng Liu. Designed &amp; built with HTML, CSS, and JavaScript.</p>
-      <a href="#top" class="footer__top">Back to top ↑</a>
+      <a href="#top" class="footer__top">Back to top</a>
     </div>
   </footer>
 
